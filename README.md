@@ -1,42 +1,36 @@
 # Leaf Disease Detection by Color Segmentation 
+Automatic Detection System for "Black Rot" in Apple Trees
 
-### Sistem Automat de Detectare a Bolii "Black Rot" la Măr
+This project proposes a desktop software solution for the automatic detection of foliar diseases in apple trees, with a specific focus on Black Rot. The application employs image processing techniques and chromatic segmentation to provide a rapid diagnosis and an estimation of the infection severity.
 
-Acest proiect propune o soluție software desktop ("EcoPlant AI") pentru detectarea automată a bolilor foliare la măr, cu accent pe **Putregaiul Negru (Black Rot)**. Aplicația utilizează tehnici de procesare a imaginilor și segmentare cromatică pentru a oferi un diagnostic rapid și o estimare a severității atacului.
+Description
 
----
+Precision agriculture requires fast and non-invasive methods for monitoring crop health. Traditional visual inspection methods are often subjective and time-consuming.
 
-## 📝 Descriere
+This project addresses the challenge of detecting diseases under variable lighting conditions (shadows, bright sunlight) by utilizing the CIELAB color space. The algorithm ignores the luminance component ($L^*$) and analyzes only the chromatic information ($a^*, b^*$), allowing for robust segmentation of the affected areas regardless of illumination.
 
-Agricultura de precizie necesită metode rapide și neinvazive pentru monitorizarea sănătății culturilor. Metodele tradiționale de inspecție vizuală sunt subiective și lente.
+Key Features
 
-Acest proiect rezolvă problema **detectării bolilor în condiții de iluminare variabilă** (umbre, soare puternic) prin utilizarea spațiului de culoare **CIELAB**. Algoritmul ignoră componenta de luminozitate ($L^*$) și analizează doar informația cromatică ($a^*, b^*$), permițând o segmentare robustă a zonelor afectate.
+Image Loading: Support for standard image formats (.jpg, .png).
 
-### Funcționalități Principale:
-* 📸 **Încărcare Imagini:** Suport pentru formatele standard (.jpg, .png).
-* 🔍 **Analiză Automată:** Segmentarea imaginii în: Țesut Sănătos, Boală (Black Rot) și Fundal.
-* 📊 **Calcul Severitate:** Estimarea automată a procentului de suprafață afectată.
-* 🎨 **Vizualizare Avansată:** Interfață grafică modernă cu hărți de segmentare și grafice statistice.
-* 🧠 **Post-procesare Inteligentă:** Filtrare morfologică pentru eliminarea zgomotului și a detecțiilor false.
+Automated Analysis: Segmentation of the image into three regions: Healthy Tissue, Disease (Black Rot), and Background.
 
----
+Severity Calculation: Automatic estimation of the percentage of the affected leaf surface area.
 
-## 🛠️ Tehnologii Utilizate
+Visualization: Graphical user interface displaying segmentation maps and statistical charts.
 
-Proiectul este dezvoltat în **Python 3.x** și utilizează următoarele biblioteci:
+Intelligent Post-processing: Morphological filtering to remove noise and false detections.
 
-* **OpenCV (`cv2`):** Pentru procesarea imaginilor, conversii de culoare și operații morfologice.
-* **NumPy:** Pentru calcule matematice și manipularea matricilor.
-* **Tkinter:** Pentru interfața grafică (GUI) nativă.
-* **Pillow (PIL):** Pentru manipularea imaginilor în interfață.
-* **Matplotlib:** Pentru generarea graficelor statistice (Pie Chart).
+Technologies Used
 
----
+The project is developed in Python 3.x and utilizes the following libraries:
 
-## 🚀 Cum să rulezi proiectul
+OpenCV (cv2): For image processing, color space conversions, and morphological operations.
 
-### 1. Instalare Dependințe
-Asigură-te că ai Python instalat. Apoi, instalează bibliotecile necesare:
+NumPy: For mathematical calculations and matrix manipulation.
 
-```bash
-pip install opencv-python numpy matplotlib pillow scikit-image
+Tkinter: For the standard graphical user interface (GUI).
+
+Pillow (PIL): For image manipulation within the interface.
+
+Matplotlib: For generating statistical charts (Pie Charts).
